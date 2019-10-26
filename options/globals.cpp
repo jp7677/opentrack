@@ -151,7 +151,7 @@ fail:   constexpr const char* subdir = "ini";
     }
     else
     {
-        const QString dir = QStandardPaths::standardLocations(QStandardPaths::DocumentsLocation).value(0, QString());
+        const QString dir = QStandardPaths::standardLocations(QStandardPaths::ConfigLocation).value(0, QString());
         if (dir.isEmpty())
             goto fail;
         (void)QDir(dir).mkpath(OPENTRACK_ORG);
